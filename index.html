@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>周老師教學小工具</title>
+  <style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(180deg, #f0f6ff 0%, #f7f7f8 80%);
+      color: #1c1c1e;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 56px 16px 24px;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: 0.02em;
+      color: #1a73e8;
+    }
+    header p {
+      margin: 0;
+      color: #5f6368;
+      font-size: 15px;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 22px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 12px rgba(26, 115, 232, 0.06);
+      border: 1px solid #e5e5ea;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 115, 232, 0.12);
+      border-color: #1a73e8;
+    }
+    .card .icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #1c1c1e;
+    }
+    .card p {
+      margin: 0 0 16px;
+      color: #5f6368;
+      font-size: 14px;
+      line-height: 1.55;
+      flex: 1;
+    }
+    .card .cta {
+      align-self: flex-start;
+      color: #1a73e8;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .card .cta::after { content: " →"; }
+    .card.disabled {
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-size: 11px; font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 10px;
+      background: #fef7e0;
+      color: #b06000;
+    }
+    .badge.ok { background: #e6f4ea; color: #1e8e3e; }
+    footer {
+      text-align: center;
+      padding: 32px 16px 48px;
+      color: #8e8e93;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    footer a { color: #5f6368; text-decoration: none; }
+    @media (max-width: 480px) {
+      header { padding: 40px 16px 16px; }
+      header h1 { font-size: 24px; }
+      .card { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>周老師教學小工具</h1>
+    <p>桃園農工 · 生物產業機電科 · 周崇吉</p>
+  </header>
+
+  <main>
+    <a class="card" href="https://alec9494.github.io/lottery/" target="_blank" rel="noopener">
+      <span class="badge ok">上線中</span>
+      <div class="icon">🎡</div>
+      <h2>轉盤抽籤工具</h2>
+      <p>課堂隨機點名、分組抽籤,輸入名單即可旋轉抽選。</p>
+      <span class="cta">開啟工具</span>
+    </a>
+
+    <a class="card" href="https://script.google.com/macros/s/AKfycbxaqPaf0r0ZHsQdp4lWjFTEfGC4hB9DiVjVEGXU-oivuIKV1Jc1rwgnJw8fCHSE45Ch/exec" target="_blank" rel="noopener">
+      <span class="badge ok">上線中</span>
+      <div class="icon">📄</div>
+      <h2>PDF 分數辨識</h2>
+      <p>上傳學生作業 PDF,Gemini 自動辨識右下角紅筆分數,輸出試算表。</p>
+      <span class="cta">開啟工具</span>
+    </a>
+
+    <a class="card" href="https://script.google.com/macros/s/AKfycbwYqu--PaueNk29pIKfbHtTKSc5iIYvMNkZbXKNXeSsjNExIYFnTvRP4oDb8nQBTg6cuA/exec" target="_blank" rel="noopener">
+      <span class="badge ok">上線中</span>
+      <div class="icon">📊</div>
+      <h2>學生成績查詢</h2>
+      <p>學生輸入姓名 + 身分證末 4 碼,即可查詢氣壓術科各範圍成績。</p>
+      <span class="cta">開啟工具</span>
+    </a>
+  </main>
+
+  <footer>
+    所有工具皆為自製,僅供教學使用。<br>
+    意見回饋:alec94@gmail.com
+  </footer>
+</body>
+</html>
